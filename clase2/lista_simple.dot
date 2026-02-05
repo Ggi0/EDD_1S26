@@ -1,0 +1,19 @@
+digraph LinkedList {
+    // Configuración general
+    rankdir=LR;  // Orientación horizontal (Left to Right)
+    node [shape=circle, style=filled, fillcolor=lightblue, fontsize=14];
+    edge [color=darkgreen, penwidth=2];
+
+    // Nodos de la lista
+    node0 [label="104"];
+    node1 [label="103"];
+    node2 [label="101"];
+
+    // Conexiones entre nodos
+    node0 -> node1;
+    node1 -> node2;
+
+    // NULL al final
+    null [label="NULL", shape=box, fillcolor=lightcoral];
+    node2 -> null;
+}
