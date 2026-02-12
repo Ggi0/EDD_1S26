@@ -1,0 +1,31 @@
+digraph ListaDoble {
+    // Configuración general
+    rankdir=LR;
+    node [shape=circle, style=filled, fillcolor=lightblue, fontsize=14];
+    edge [color=darkgreen, penwidth=2, dir=both];
+
+    // Nodos de la lista
+    node0 [label="105"];
+    node1 [label="104"];
+    node2 [label="103"];
+    node3 [label="102"];
+    node4 [label="101"];
+    node5 [label="106"];
+    node6 [label="107"];
+    node7 [label="108"];
+
+    // Conexiones bidireccionales (next y prev)
+    node0 -> node1 [dir=both];
+    node1 -> node2 [dir=both];
+    node2 -> node3 [dir=both];
+    node3 -> node4 [dir=both];
+    node4 -> node5 [dir=both];
+    node5 -> node6 [dir=both];
+    node6 -> node7 [dir=both];
+
+    // NULL en ambos extremos
+    null_inicio [label="NULL", shape=box, fillcolor=lightcoral];
+    null_fin [label="NULL", shape=box, fillcolor=lightcoral];
+    null_inicio -> node0 [dir=forward];
+    node7 -> null_fin [dir=forward];
+}

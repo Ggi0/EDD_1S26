@@ -1,0 +1,9 @@
+digraph ListaDoble {
+    // Configuración general
+    rankdir=LR;
+    node [shape=circle, style=filled, fillcolor=lightblue, fontsize=14];
+    edge [color=darkgreen, penwidth=2, dir=both];
+
+    // Lista vacía
+    empty [label="VACÍA", shape=box, fillcolor=lightgray];
+}
