@@ -105,7 +105,8 @@ sub delete{
 
 
 # imprimir la lista --> recorre toda la lista y muestra cada nodo
-sub imprimir_lista {
+# imprimir la lista --> recorre toda la lista y muestra cada nodo
+sub imprimir_info {
     my ($self) = @_;
 
     if ($self->is_empty()) {
@@ -126,6 +127,40 @@ sub imprimir_lista {
     }
 
     print " ==> NULL\n\n";
+}
+
+
+# get_info_graphviz()
+# Retorna un label en formato record para Graphviz
+sub get_info_graphviz {
+    my ($self) = @_;
+
+    # Si está vacía
+    if ($self->is_empty()) {
+        return " VACIA ";
+    }
+
+    my $current = $self->{head};
+
+    my @labels;
+
+    while (defined($current)) {
+        my $data = $current->get_data();
+
+        # escapar caracteres peligrosos
+        $data =~ s/"/\\"/g;
+
+        push @labels, $data;
+
+        $current = $current->get_next();
+    }
+
+    push @labels, "NULL";
+
+    # unir en formato record vertical
+    my $label = "[ " . join(" | ", @labels) . " ]";
+
+    return $label;
 }
 
 

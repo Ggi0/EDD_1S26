@@ -17,7 +17,7 @@ sub main{
     my $lista = LinkedList->new();
 
     print $lista->is_empty() . "\n";
-    $lista->imprimir_lista();
+    $lista->imprimir_info();
     
 
     $lista->agregar(101);
@@ -30,10 +30,10 @@ sub main{
     
     print $lista->is_empty() . "\n";
     
-    $lista->imprimir_lista();
+    $lista->imprimir_info();
 
     $lista->delete(102);
-    $lista->imprimir_lista(101);
+    $lista->imprimir_info(101);
 
     Graficar->generador_dot($lista, "lista_simple.dot");
     Graficar->graficar_imagen($lista, "lista_simple");
