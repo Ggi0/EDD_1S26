@@ -1,0 +1,61 @@
+digraph ListaCircular {
+    // Configuracion general del grafo
+    rankdir=LR;  // Orientacion horizontal (Left to Right)
+    
+    // Estilo de los nodos
+    node [
+        shape=circle,           // Forma circulo con divisiones
+        style=filled,
+        fillcolor=lightblue,
+        fontsize=12,
+        fontname="Arial"
+    ];
+    
+    // Estilo de las flechas
+    edge [
+        color=darkgreen,
+        penwidth=2,
+        arrowsize=1.0
+    ];
+
+    // === NODOS DE LA LISTA ===
+    node0 [
+        label=" Nombre: pelicula test1
+Director: Bong Joon-ho
+Duracion: 132 minutos
+Año: 2019 "
+    ];
+    node1 [
+        label=" Nombre: Inception
+Director: Christopher Nolan
+Duracion: 148 minutos
+Año: 2010 "
+    ];
+    node2 [
+        label=" Nombre: El Señor de los Anillos
+Director: Peter Jackson
+Duracion: 178 minutos
+Año: 2001 "
+    ];
+    node3 [
+        label=" Nombre: Pulp Fiction
+Director: Quentin Tarantino
+Duracion: 154 minutos
+Año: 1994 "
+    ];
+    node4 [
+        label=" Nombre: El Padrino
+Director: Francis Ford Coppola
+Duracion: 175 minutos
+Año: 1972 "
+    ];
+
+    // === CONEXIONES ENTRE NODOS ===
+    node0 -> node1;
+    node1 -> node2;
+    node2 -> node3;
+    node3 -> node4;
+    // Flecha que cierra el circulo (vuelve a HEAD)
+    node4 -> node0 [
+    ];
+}

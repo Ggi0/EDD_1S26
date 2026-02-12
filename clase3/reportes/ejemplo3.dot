@@ -1,0 +1,38 @@
+digraph ListaCircular {
+    // Configuracion general del grafo
+    rankdir=LR;  // Orientacion horizontal (Left to Right)
+    
+    // Estilo de los nodos
+    node [
+        shape=circle,           // Forma circulo con divisiones
+        style=filled,
+        fillcolor=lightblue,
+        fontsize=12,
+        fontname="Arial"
+    ];
+    
+    // Estilo de las flechas
+    edge [
+        color=darkgreen,
+        penwidth=2,
+        arrowsize=1.0
+    ];
+
+    // === NODOS DE LA LISTA ===
+    node0 [
+        label=" [ negrp | celeste | azul | café | NULL ] "
+    ];
+    node1 [
+        label=" [ 3 | 2 | 1 | NULL ] "
+    ];
+    node2 [
+        label=" [ C | B | A | NULL ] "
+    ];
+
+    // === CONEXIONES ENTRE NODOS ===
+    node0 -> node1;
+    node1 -> node2;
+    // Flecha que cierra el circulo (vuelve a HEAD)
+    node2 -> node0 [
+    ];
+}
