@@ -1,0 +1,77 @@
+digraph MatrizDispersa {
+    labelloc="t";
+    fontsize=16;
+    fontname="Arial Bold";
+    nodesep=0.6;
+    ranksep=0.7;
+
+    node [shape=box, style=filled, fontname="Arial", fontsize=11];
+    edge [fontcolor=black, fontsize=9];
+
+    // Nodo origen (esquina)
+    origen [label="filas/columna",  fontsize=10];
+
+    // === CABECERAS DE COLUMNAS ========
+cab_col_0 [label="Col 0", group=1, fillcolor="#2980b9", fontcolor=white];
+cab_col_1 [label="Col 1", group=2, fillcolor="#2980b9", fontcolor=white];
+cab_col_2 [label="Col 2", group=3, fillcolor="#2980b9", fontcolor=white];
+cab_col_4 [label="Col 4", group=5, fillcolor="#2980b9", fontcolor=white];
+cab_col_10 [label="Col 10", group=11, fillcolor="#2980b9", fontcolor=white];
+
+    // =========== CABECERAS DE FILAS =====
+cab_fil_0 [label="Fil 0", group=0, fillcolor="#27ae60", fontcolor=white];
+cab_fil_1 [label="Fil 1", group=0, fillcolor="#27ae60", fontcolor=white];
+cab_fil_2 [label="Fil 2", group=0, fillcolor="#27ae60", fontcolor=white];
+cab_fil_3 [label="Fil 3", group=0, fillcolor="#27ae60", fontcolor=white];
+cab_fil_10 [label="Fil 10", group=0, fillcolor="#27ae60", fontcolor=white];
+
+    // ========= NODOS DATO (elementos no-cero) ====+==
+dato_0_1 [label="(0,1)\nval=62", group=2, fillcolor="#ecf0f1"];
+dato_1_1 [label="(1,1)\nval=999.99", group=2, fillcolor="#ecf0f1"];
+dato_1_4 [label="(1,4)\nval=hola", group=5, fillcolor="#ecf0f1"];
+dato_2_2 [label="(2,2)\nval=3", group=3, fillcolor="#ecf0f1"];
+dato_3_0 [label="(3,0)\nval=82.6", group=1, fillcolor="#ecf0f1"];
+dato_3_4 [label="(3,4)\nval=9.4", group=5, fillcolor="#ecf0f1"];
+dato_10_10 [label="(10,10)\nval=42", group=11, fillcolor="#ecf0f1"];
+
+    // FLECHAS HORIZONTALES (por fila) ============
+    cab_fil_0 -> dato_0_1 [dir=both, color="#27ae60"];
+    cab_fil_1 -> dato_1_1 [dir=both, color="#27ae60"];
+    dato_1_1 -> dato_1_4 [dir=both, color="#27ae60"];
+    cab_fil_2 -> dato_2_2 [dir=both, color="#27ae60"];
+    cab_fil_3 -> dato_3_0 [dir=both, color="#27ae60"];
+    dato_3_0 -> dato_3_4 [dir=both, color="#27ae60"];
+    cab_fil_10 -> dato_10_10 [dir=both, color="#27ae60"];
+
+    // ========== FLECHAS VERTICALES (por columna) =====
+    cab_col_0 -> dato_3_0 [dir=both, color="#2980b9"];
+    cab_col_1 -> dato_0_1 [dir=both, color="#2980b9"];
+    dato_0_1 -> dato_1_1 [dir=both, color="#2980b9"];
+    cab_col_2 -> dato_2_2 [dir=both, color="#2980b9"];
+    cab_col_4 -> dato_1_4 [dir=both, color="#2980b9"];
+    dato_1_4 -> dato_3_4 [dir=both, color="#2980b9"];
+    cab_col_10 -> dato_10_10 [dir=both, color="#2980b9"];
+
+    // alineacion
+    // Fila superior: origen y cabeceras de columna
+    { rank=same; origen; cab_col_0; cab_col_1; cab_col_2; cab_col_4; cab_col_10; }
+    { rank=same; cab_fil_0; dato_0_1; }
+    { rank=same; cab_fil_1; dato_1_1; dato_1_4; }
+    { rank=same; cab_fil_2; dato_2_2; }
+    { rank=same; cab_fil_3; dato_3_0; dato_3_4; }
+    { rank=same; cab_fil_10; dato_10_10; }
+
+    // Enlace de encuadre superior (no se ve)
+    origen -> cab_col_0 [style=invis];
+    cab_col_0 -> cab_col_1 [style=invis];
+    cab_col_1 -> cab_col_2 [style=invis];
+    cab_col_2 -> cab_col_4 [style=invis];
+    cab_col_4 -> cab_col_10 [style=invis];
+
+    // Enlace de encuadre izquierdo (no se ve)
+    origen -> cab_fil_0 [style=invis];
+    cab_fil_0 -> cab_fil_1 [style=invis];
+    cab_fil_1 -> cab_fil_2 [style=invis];
+    cab_fil_2 -> cab_fil_3 [style=invis];
+    cab_fil_3 -> cab_fil_10 [style=invis];
+}

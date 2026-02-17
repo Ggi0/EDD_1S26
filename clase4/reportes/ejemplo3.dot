@@ -1,0 +1,64 @@
+digraph G {
+    fontcolor=black;
+    label="Matriz Dispersa";
+    labelloc="t";
+    nodesep=0.8
+    node [shape=box width=1.2 style=filled fillcolor="lightblue"];
+    edge [fontcolor=white color="black"];
+
+    /*------------Cabeceras Horizontales------------*/
+    n0 [label="admin" group=1];
+    n1 [label="Guatemala" group=2];
+    n2 [label="Jalapa" group=3];
+    n3 [label="Jutiapa" group=4];
+
+    /*------------Cabeceras Verticales------------*/
+    n4 [label="Lala" group=1];
+    n5 [label="Dell" group=1];
+    n6 [label="AWS" group=1];
+
+    /*------------Primera Columna------------*/
+    n7 [label="Usr1" group=2];
+    n8 [label="Usr5" group=2];
+    n9 [label="Usr4" group=2];
+
+    /*------------Segunda Columna------------*/
+    n10 [label="Usr2" group=3];
+
+    /*------------Tercera Columna------------*/
+    n11 [label="Usr6" group=4];
+    n12 [label="Usr3" group=4];
+
+    /*------------Relaciones Horizontales------------*/
+    n0 -> n1 -> n2 -> n3;
+    n3 -> n2 -> n1 -> n0;
+
+    n4 -> n7;
+    n7 -> n4;
+
+    n5 -> n8 -> n10 -> n11;
+    n11 -> n10 -> n8 -> n5;
+
+    n6 -> n9 -> n12;
+    n12 -> n9 -> n6;
+
+    /*------------Relaciones Verticales------------*/
+    n0 -> n4 -> n5 -> n6;
+    n6 -> n5 -> n4 -> n0;
+
+    n1 -> n7 -> n8 -> n9;
+    n9 -> n8 -> n7 -> n1;
+
+    n2 -> n10;
+    n10 -> n2;
+
+    n3 -> n11 -> n12;
+    n12 -> n11 -> n3;
+
+    /*------------Encuadre------------*/
+    { rank=same; n0; n1; n2; n3; }
+    { rank=same; n4; n7; }
+    { rank=same; n5; n8; n10; n11; }
+    { rank=same; n6; n9; n12 }
+
+}
