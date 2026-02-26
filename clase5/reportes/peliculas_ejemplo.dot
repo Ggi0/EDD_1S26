@@ -1,0 +1,61 @@
+digraph ListaCircular {
+    // Configuracion general del grafo
+    rankdir=LR;  // Orientacion horizontal (Left to Right)
+    
+    // Estilo de los nodos
+    node [
+        shape=circle,           // Forma circulo con divisiones
+        style=filled,
+        fillcolor=lightblue,
+        fontsize=12,
+        fontname="Arial"
+    ];
+    
+    // Estilo de las flechas
+    edge [
+        color=darkgreen,
+        penwidth=2,
+        arrowsize=1.0
+    ];
+
+    // === NODOS DE LA LISTA ===
+    node0 [
+        label=" Nombre: g
+Director: f
+Duracion: 1 minutos
+Año: 2 "
+    ];
+    node1 [
+        label=" Nombre: Mario
+Director: fulanito
+Duracion: 23 minutos
+Año: 2023 "
+    ];
+    node2 [
+        label=" Nombre: Flow
+Director: directo
+Duracion: 120 minutos
+Año: 2025 "
+    ];
+    node3 [
+        label=" Nombre: Barbi
+Director: Juanita
+Duracion: 200 minutos
+Año: 2024 "
+    ];
+    node4 [
+        label=" Nombre: batman
+Director: juanito
+Duracion: 175 minutos
+Año: 2022 "
+    ];
+
+    // === CONEXIONES ENTRE NODOS ===
+    node0 -> node1;
+    node1 -> node2;
+    node2 -> node3;
+    node3 -> node4;
+    // Flecha que cierra el circulo (vuelve a HEAD)
+    node4 -> node0 [
+    ];
+}
