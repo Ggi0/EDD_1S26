@@ -1,0 +1,31 @@
+digraph BST {
+    rankdir=TB;
+    node [
+        shape=circle,
+        style=filled,
+        fillcolor="#B0BEC5",
+        fontname="Arial"
+    ];
+
+    n20 [label="20"];
+    n16 [label="16"];
+    n6 [label="6"];
+    n5 [label="5"];
+    n8 [label="8"];
+    n15 [label="15"];
+    n17 [label="17"];
+    n19 [label="19"];
+    n18 [label="18"];
+    n32 [label="32"];
+    n28 [label="28"];
+    n20 -> n16;
+    n16 -> n6;
+    n6 -> n5;
+    n6 -> n8;
+    n8 -> n15;
+    n16 -> n17;
+    n17 -> n19;
+    n19 -> n18;
+    n20 -> n32;
+    n32 -> n28;
+}
