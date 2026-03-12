@@ -1,0 +1,15 @@
+digraph BST {
+    rankdir=TB;
+    node [
+        shape=circle,
+        style=filled,
+        fillcolor="#B0BEC5",
+        fontname="Arial"
+    ];
+
+    n30 [label="30"];
+    n20 [label="20"];
+    n10 [label="10"];
+    n30 -> n20;
+    n20 -> n10;
+}

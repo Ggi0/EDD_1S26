@@ -1,0 +1,39 @@
+digraph AVL {
+    rankdir=TB;
+    node [
+        shape=circle,
+        style=filled,
+        fontname="Arial Bold",
+        fontsize=11
+    ];
+
+    edge [fontname="Arial", fontsize=9, color="#546E7A"];
+
+    n25 [label="25\nh=4  fe=-1", fillcolor="#90CAF9"];
+    n17 [label="17\nh=3  fe=1", fillcolor="#FFCC80"];
+    n15 [label="15\nh=1  fe=-1", fillcolor="#90CAF9"];
+    n10 [label="10\nh=0  fe=0", fillcolor="#A5D6A7"];
+    n20 [label="20\nh=2  fe=-1", fillcolor="#90CAF9"];
+    n18 [label="18\nh=1  fe=1", fillcolor="#FFCC80"];
+    n19 [label="19\nh=0  fe=0", fillcolor="#A5D6A7"];
+    n22 [label="22\nh=0  fe=0", fillcolor="#A5D6A7"];
+    n80 [label="80\nh=2  fe=0", fillcolor="#A5D6A7"];
+    n50 [label="50\nh=1  fe=1", fillcolor="#FFCC80"];
+    n75 [label="75\nh=0  fe=0", fillcolor="#A5D6A7"];
+    n90 [label="90\nh=1  fe=0", fillcolor="#A5D6A7"];
+    n85 [label="85\nh=0  fe=0", fillcolor="#A5D6A7"];
+    n115 [label="115\nh=0  fe=0", fillcolor="#A5D6A7"];
+    n25 -> n17 [label=""];
+    n17 -> n15 [label=""];
+    n15 -> n10 [label=""];
+    n17 -> n20 [label=""];
+    n20 -> n18 [label=""];
+    n18 -> n19 [label=""];
+    n20 -> n22 [label=""];
+    n25 -> n80 [label=""];
+    n80 -> n50 [label=""];
+    n50 -> n75 [label=""];
+    n80 -> n90 [label=""];
+    n90 -> n85 [label=""];
+    n90 -> n115 [label=""];
+}

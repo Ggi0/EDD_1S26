@@ -1,0 +1,29 @@
+digraph AVL {
+    rankdir=TB;
+    node [
+        shape=circle,
+        style=filled,
+        fontname="Arial Bold",
+        fontsize=11
+    ];
+
+    edge [fontname="Arial", fontsize=9, color="#546E7A"];
+
+    n30 [label="30\nh=3  fe=0", fillcolor="#A5D6A7"];
+    n20 [label="20\nh=2  fe=-1", fillcolor="#90CAF9"];
+    n10 [label="10\nh=1  fe=1", fillcolor="#FFCC80"];
+    n15 [label="15\nh=0  fe=0", fillcolor="#A5D6A7"];
+    n25 [label="25\nh=0  fe=0", fillcolor="#A5D6A7"];
+    n40 [label="40\nh=2  fe=1", fillcolor="#FFCC80"];
+    n35 [label="35\nh=0  fe=0", fillcolor="#A5D6A7"];
+    n50 [label="50\nh=1  fe=-1", fillcolor="#90CAF9"];
+    n45 [label="45\nh=0  fe=0", fillcolor="#A5D6A7"];
+    n30 -> n20 [label=""];
+    n20 -> n10 [label=""];
+    n10 -> n15 [label=""];
+    n20 -> n25 [label=""];
+    n30 -> n40 [label=""];
+    n40 -> n35 [label=""];
+    n40 -> n50 [label=""];
+    n50 -> n45 [label=""];
+}
