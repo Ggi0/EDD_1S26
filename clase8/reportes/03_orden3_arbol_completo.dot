@@ -1,0 +1,36 @@
+digraph BTree {
+    rankdir=TB;
+    splines=false;
+    nodesep=0.4;
+    ranksep=1.2;
+    ordering=out;
+    node [
+        shape=record,
+        style=filled,
+        fontname="Arial",
+        fontsize=12,
+        height=0.45
+    ];
+
+    edge [color="#111111", arrowhead=none, penwidth=1.3];
+
+    label="Arbol B  -  Orden M=3  -  Claves totales=9";
+    labelloc=top;
+    fontsize=13;
+
+    n0 [label="<p0>| 20 |<p1>", fillcolor="#F5F5F5"];
+    n1 [label="<p0>| 5 |<p1>| 10 |<p2>", fillcolor="#BDBDBD"];
+    n0:p0 -> n1;
+    n2 [label=" 3 ", fillcolor="#FFFFFF"];
+    n1:p0 -> n2;
+    n3 [label=" 7 ", fillcolor="#FFFFFF"];
+    n1:p1 -> n3;
+    n4 [label=" 15 ", fillcolor="#FFFFFF"];
+    n1:p2 -> n4;
+    n5 [label="<p0>| 30 |<p1>", fillcolor="#F5F5F5"];
+    n0:p1 -> n5;
+    n6 [label=" 25 ", fillcolor="#FFFFFF"];
+    n5:p0 -> n6;
+    n7 [label=" 35 ", fillcolor="#FFFFFF"];
+    n5:p1 -> n7;
+}
