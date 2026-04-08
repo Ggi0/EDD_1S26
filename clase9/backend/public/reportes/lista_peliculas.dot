@@ -1,0 +1,13 @@
+digraph ListaCircular {
+  rankdir=LR;
+  node [shape=box, style=filled, fillcolor=lightblue];
+  graph [label="Lista Circular de Películas", fontsize=16];
+
+  nodo0 [label="pelicula3\nDir: Christopher Nolan\nAño: 2010"];
+  nodo1 [label="pelicula2\nDir: Christopher Nolan\nAño: 2010"];
+  nodo2 [label="Inception\nDir: Christopher Nolan\nAño: 2010"];
+
+  nodo0 -> nodo1;
+  nodo1 -> nodo2;
+  nodo2 -> nodo0;
+}
