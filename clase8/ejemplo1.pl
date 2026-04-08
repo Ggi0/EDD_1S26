@@ -131,6 +131,28 @@ sub main {
 
     Graficar->graficar($arbol4, "10_orden4_arbol_completo");
     $arbol4->imprimir_arbol();
+
+    my $arbol_ej = BTree->new(4);
+    $arbol_ej->insertar(17);
+    $arbol_ej->insertar(84);
+    $arbol_ej->insertar(2);
+    $arbol_ej->insertar(24);
+    $arbol_ej->insertar(32);
+    $arbol_ej->insertar(12);
+    $arbol_ej->insertar(4);
+    $arbol_ej->insertar(15);
+    $arbol_ej->insertar(94);
+    $arbol_ej->insertar(41);
+    $arbol_ej->insertar(11);
+    $arbol_ej->insertar(8);
+    $arbol_ej->insertar(26);
+    $arbol_ej->insertar(100);
+    $arbol_ej->insertar(91);
+    $arbol_ej->insertar(33);
+    $arbol_ej->insertar(1);
+    Graficar->graficar($arbol_ej, "archivoEntrada");
+
+
 }
 
 main() unless caller;
