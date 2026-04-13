@@ -1,0 +1,44 @@
+digraph LISTA_ADYACENCIA {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor="#B0C4DE", fontname="Arial"];
+    edge [color="#333333", constraint=true];
+    v_1 [label="1", fillcolor="#87CEFA", group="col1"];
+    n_1_2 [label="2"];
+    v_1 -> n_1_2;
+    n_1_3 [label="3"];
+    n_1_2 -> n_1_3;
+    null_1 [label="NULL", shape=plaintext];
+    n_1_3 -> null_1;
+    { rank=same; v_1 n_1_2 n_1_3 null_1 }
+
+    v_2 [label="2", fillcolor="#87CEFA", group="col1"];
+    v_1 -> v_2 [dir=none];
+    n_2_1 [label="1"];
+    v_2 -> n_2_1;
+    n_2_4 [label="4"];
+    n_2_1 -> n_2_4;
+    null_2 [label="NULL", shape=plaintext];
+    n_2_4 -> null_2;
+    { rank=same; v_2 n_2_1 n_2_4 null_2 }
+
+    v_3 [label="3", fillcolor="#87CEFA", group="col1"];
+    v_2 -> v_3 [dir=none];
+    n_3_1 [label="1"];
+    v_3 -> n_3_1;
+    n_3_4 [label="4"];
+    n_3_1 -> n_3_4;
+    null_3 [label="NULL", shape=plaintext];
+    n_3_4 -> null_3;
+    { rank=same; v_3 n_3_1 n_3_4 null_3 }
+
+    v_4 [label="4", fillcolor="#87CEFA", group="col1"];
+    v_3 -> v_4 [dir=none];
+    n_4_2 [label="2"];
+    v_4 -> n_4_2;
+    n_4_3 [label="3"];
+    n_4_2 -> n_4_3;
+    null_4 [label="NULL", shape=plaintext];
+    n_4_3 -> null_4;
+    { rank=same; v_4 n_4_2 n_4_3 null_4 }
+
+}

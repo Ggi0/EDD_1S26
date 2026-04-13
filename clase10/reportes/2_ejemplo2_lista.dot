@@ -1,0 +1,50 @@
+digraph LISTA_ADYACENCIA {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor="#B0C4DE", fontname="Arial"];
+    edge [color="#333333", constraint=true];
+    v_alice [label="alice", fillcolor="#87CEFA", group="col1"];
+    n_alice_carlos [label="carlos"];
+    v_alice -> n_alice_carlos;
+    null_alice [label="NULL", shape=plaintext];
+    n_alice_carlos -> null_alice;
+    { rank=same; v_alice n_alice_carlos null_alice }
+
+    v_bob [label="bob", fillcolor="#87CEFA", group="col1"];
+    v_alice -> v_bob [dir=none];
+    n_bob_carlos [label="carlos"];
+    v_bob -> n_bob_carlos;
+    n_bob_Ale [label="Ale"];
+    n_bob_carlos -> n_bob_Ale;
+    n_bob_elena [label="elena"];
+    n_bob_Ale -> n_bob_elena;
+    null_bob [label="NULL", shape=plaintext];
+    n_bob_elena -> null_bob;
+    { rank=same; v_bob n_bob_carlos n_bob_Ale n_bob_elena null_bob }
+
+    v_carlos [label="carlos", fillcolor="#87CEFA", group="col1"];
+    v_bob -> v_carlos [dir=none];
+    n_carlos_alice [label="alice"];
+    v_carlos -> n_carlos_alice;
+    n_carlos_bob [label="bob"];
+    n_carlos_alice -> n_carlos_bob;
+    null_carlos [label="NULL", shape=plaintext];
+    n_carlos_bob -> null_carlos;
+    { rank=same; v_carlos n_carlos_alice n_carlos_bob null_carlos }
+
+    v_Ale [label="Ale", fillcolor="#87CEFA", group="col1"];
+    v_carlos -> v_Ale [dir=none];
+    n_Ale_bob [label="bob"];
+    v_Ale -> n_Ale_bob;
+    null_Ale [label="NULL", shape=plaintext];
+    n_Ale_bob -> null_Ale;
+    { rank=same; v_Ale n_Ale_bob null_Ale }
+
+    v_elena [label="elena", fillcolor="#87CEFA", group="col1"];
+    v_Ale -> v_elena [dir=none];
+    n_elena_bob [label="bob"];
+    v_elena -> n_elena_bob;
+    null_elena [label="NULL", shape=plaintext];
+    n_elena_bob -> null_elena;
+    { rank=same; v_elena n_elena_bob null_elena }
+
+}

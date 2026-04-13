@@ -1,0 +1,24 @@
+graph GRAFO {
+    rankdir=LR;
+    node [
+        shape=ellipse,
+        style=filled,
+        fillcolor="#B0C4DE",
+        fontname="Arial",
+        fontsize=12
+    ];
+    edge [
+        color="#555555"
+    ];
+
+    "alice";
+    "bob";
+    "carlos";
+    "Ale";
+    "elena";
+
+    "alice" -- "carlos";
+    "bob" -- "carlos";
+    "bob" -- "Ale";
+    "bob" -- "elena";
+}
