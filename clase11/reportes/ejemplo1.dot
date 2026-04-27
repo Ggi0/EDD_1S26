@@ -1,0 +1,34 @@
+digraph TablaHash {
+    graph [
+        rankdir = TB
+        bgcolor = "#FFFFFF"
+        fontname = "Helvetica"
+    ]
+
+    node [shape=none fontname="Helvetica"]
+
+    tabla [label=<
+        <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="6">
+            <TR>
+                <TD><B>Slot</B></TD>
+                <TD><B>Contenido</B></TD>
+            </TR>
+            <TR>
+                <TD>[0]</TD>
+                <TD>Ana Lopez → Roberto Fuentes → Diego Perez</TD>
+            </TR>
+            <TR>
+                <TD>[1]</TD>
+                <TD>Jorge Castillo → Maria Hernandez → Pablo Alvarado</TD>
+            </TR>
+            <TR>
+                <TD>[2]</TD>
+                <TD>Sofiaaaa Ramirez → Luis Morales</TD>
+            </TR>
+            <TR>
+                <TD>[3]</TD>
+                <TD>Elena Torres</TD>
+            </TR>
+        </TABLE>
+    >];
+}
